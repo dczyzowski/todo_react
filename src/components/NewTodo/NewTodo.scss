@@ -1,0 +1,67 @@
+@import "/src/styles/colors.scss";
+@import "/src/styles/components.scss";
+.new-todo__form {
+    position: relative;
+    padding: 10px 0;
+    margin-top: 10px;
+    display: flex;
+}
+
+.new-todo__input {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 1.3rem;
+    color: $primary;
+    padding: 10px;
+    background: transparent;
+    transition: border-color 0.2s;
+    &::placeholder {
+        color: transparent;
+    }
+    &:placeholder-shown~.new-todo__input-label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+}
+
+.new-todo__input-label {
+    position: absolute;
+    top: 0;
+    margin-left: 10px;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+}
+
+.new-todo__input:focus {
+    ~.form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: $primary;
+        font-weight: 700;
+    }
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to left, $primary, $secondary);
+    border-image-slice: 1;
+}
+
+.new-todo__input {
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+}
+
+.new-todo__submit-button {
+    width: 50px;
+}

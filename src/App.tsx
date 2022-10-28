@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { TodoListView } from "./components/TodoList";
+import { Todos } from "./components/Todos";
 
 function App(props: {tab:string}) {
   return (
-    <div id="s">
-      <TodoListView/>
-    </div>
+      <Todos/>
   );
 }
-
 
 export default App;

@@ -1,0 +1,14 @@
+.button-brown {
+    height: auto;
+    padding: 10px;
+    background-color: $secondary;
+    color: $neutral;
+    border: 0px solid $primary;
+    transition: 0.4s;
+}
+
+.button-brown:hover {
+    background-color: $primary;
+    color: $white;
+    transition: 0.4s;
+}
